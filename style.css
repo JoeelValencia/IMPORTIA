@@ -28,10 +28,22 @@ body {
 }
 
 /* ---- Category Buttons ---- */
+.category-btn {
+    background: #0a120e;
+    color: #E7E7E7;
+    border-color: #1a2e1f;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.category-btn:hover:not(.active) {
+    background: #0f1a12;
+    border-color: #00A849;
+}
+
 .category-btn.active {
-    background: #00F068;
-    color: #000000;
-    border-color: #00F068;
+    background: #00F068 !important;
+    color: #000000 !important;
+    border-color: #00F068 !important;
     box-shadow: 0 0 20px rgba(0, 240, 104, 0.35);
     transform: scale(1.05);
 }
@@ -93,20 +105,13 @@ details[open] summary {
     filter: drop-shadow(0 0 14px rgba(0, 240, 104, 0.45));
 }
 
-/* ---- Cart Modal: mobile positioning ---- */
-@media (max-width: 767px) {
+/* ---- Cart Modal: desktop centering ---- */
+@media (min-width: 768px) {
     #cart-modal {
-        top: 60px !important;
-        left: 50% !important;
-        transform: translateX(-50%) scale(0.92) !important;
-        max-height: calc(100dvh - 68px) !important;
-        border-top-left-radius: 20px !important;
-        border-top-right-radius: 20px !important;
-    }
-
-    /* Cuando el modal está abierto (sin escala) */
-    #cart-modal.cart-open {
-        transform: translateX(-50%) scale(1) !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) scale(0.92) !important;
+        max-height: 90vh !important;
+        border-radius: 24px !important;
     }
 }
 

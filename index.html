@@ -186,12 +186,13 @@
         style="display:none; position:fixed; inset:0; z-index:1000; background:rgba(0,0,0,0.75); backdrop-filter:blur(6px);"
         onclick="if(event.target===this) closeCart()">
 
-        <div id="cart-modal" style="position:fixed; top:50%; left:50%; transform:translate(-50%,-50%) scale(0.92);
+        <div id="cart-modal" style="position:fixed; top:10px; left:50%; transform:translateX(-50%) scale(0.92);
                    width:min(92vw, 440px); background:#0a120e; border:1px solid #00A849;
-                   border-radius:24px; box-shadow:0 0 60px rgba(0,240,104,0.2);
+                   border-radius:20px; box-shadow:0 0 60px rgba(0,240,104,0.2);
                    transition:transform 0.25s cubic-bezier(.34,1.56,.64,1), opacity 0.2s;
-                   opacity:0; overflow-y:auto; max-height:90vh;
+                   opacity:0; overflow-y:auto; max-height:calc(100dvh - 20px);
                    -webkit-overflow-scrolling:touch;">
+
 
             <!-- Header -->
             <div
@@ -488,65 +489,43 @@
                                 class="flex flex-row md:flex-col gap-3 overflow-x-auto md:overflow-x-visible pb-2 md:pb-0">
 
                                 <button
-                                    class="category-btn active flex flex-col items-center justify-center w-24 h-24 md:w-full rounded-2xl transition border"
-                                    style="background:#00F068; color:#000000; border-color:#00F068;"
-                                    onmouseover="if(!this.classList.contains('active')){this.style.background='#0f1a12'; this.style.borderColor='#00A849';}"
-                                    onmouseout="if(!this.classList.contains('active')){this.style.background='#0a120e'; this.style.borderColor='#1a2e1f';}"
+                                    class="category-btn active flex flex-col items-center justify-center w-24 h-24 md:w-full rounded-2xl border"
                                     data-category="airpods">
                                     <span class="text-3xl mb-1">🎧</span>
                                     <span class="text-xs font-medium text-center leading-tight">AirPods</span>
                                 </button>
                                 <button
-                                    class="category-btn flex flex-col items-center justify-center w-24 h-24 md:w-full rounded-2xl transition border"
-                                    style="background:#0a120e; color:#E7E7E7; border-color:#1a2e1f;"
-                                    onmouseover="if(!this.classList.contains('active')){this.style.background='#0f1a12'; this.style.borderColor='#00A849';}"
-                                    onmouseout="if(!this.classList.contains('active')){this.style.background='#0a120e'; this.style.borderColor='#1a2e1f';}"
+                                    class="category-btn flex flex-col items-center justify-center w-24 h-24 md:w-full rounded-2xl border"
                                     data-category="cables">
                                     <span class="text-3xl mb-1">🔌</span>
                                     <span class="text-xs font-medium text-center leading-tight">Cables</span>
                                 </button>
                                 <button
-                                    class="category-btn flex flex-col items-center justify-center w-24 h-24 md:w-full rounded-2xl transition border"
-                                    style="background:#0a120e; color:#E7E7E7; border-color:#1a2e1f;"
-                                    onmouseover="if(!this.classList.contains('active')){this.style.background='#0f1a12'; this.style.borderColor='#00A849';}"
-                                    onmouseout="if(!this.classList.contains('active')){this.style.background='#0a120e'; this.style.borderColor='#1a2e1f';}"
+                                    class="category-btn flex flex-col items-center justify-center w-24 h-24 md:w-full rounded-2xl border"
                                     data-category="iphone">
                                     <span class="text-3xl mb-1">📱</span>
                                     <span class="text-xs font-medium text-center leading-tight">iPhone</span>
                                 </button>
-
                                 <button
-                                    class="category-btn flex flex-col items-center justify-center w-24 h-24 md:w-full rounded-2xl transition border"
-                                    style="background:#0a120e; color:#E7E7E7; border-color:#1a2e1f;"
-                                    onmouseover="if(!this.classList.contains('active')){this.style.background='#0f1a12'; this.style.borderColor='#00A849';}"
-                                    onmouseout="if(!this.classList.contains('active')){this.style.background='#0a120e'; this.style.borderColor='#1a2e1f';}"
+                                    class="category-btn flex flex-col items-center justify-center w-24 h-24 md:w-full rounded-2xl border"
                                     data-category="samsung">
                                     <span class="text-3xl mb-1">📲</span>
                                     <span class="text-xs font-medium text-center leading-tight">Samsung</span>
                                 </button>
                                 <button
-                                    class="category-btn flex flex-col items-center justify-center w-24 h-24 md:w-full rounded-2xl transition border"
-                                    style="background:#0a120e; color:#E7E7E7; border-color:#1a2e1f;"
-                                    onmouseover="if(!this.classList.contains('active')){this.style.background='#0f1a12'; this.style.borderColor='#00A849';}"
-                                    onmouseout="if(!this.classList.contains('active')){this.style.background='#0a120e'; this.style.borderColor='#1a2e1f';}"
+                                    class="category-btn flex flex-col items-center justify-center w-24 h-24 md:w-full rounded-2xl border"
                                     data-category="ipad">
                                     <span class="text-3xl mb-1">📘</span>
                                     <span class="text-xs font-medium text-center leading-tight">iPad</span>
                                 </button>
                                 <button
-                                    class="category-btn flex flex-col items-center justify-center w-24 h-24 md:w-full rounded-2xl transition border"
-                                    style="background:#0a120e; color:#E7E7E7; border-color:#1a2e1f;"
-                                    onmouseover="if(!this.classList.contains('active')){this.style.background='#0f1a12'; this.style.borderColor='#00A849';}"
-                                    onmouseout="if(!this.classList.contains('active')){this.style.background='#0a120e'; this.style.borderColor='#1a2e1f';}"
+                                    class="category-btn flex flex-col items-center justify-center w-24 h-24 md:w-full rounded-2xl border"
                                     data-category="watch">
                                     <span class="text-3xl mb-1">⌚</span>
                                     <span class="text-xs font-medium text-center leading-tight">Watch</span>
                                 </button>
                                 <button
-                                    class="category-btn flex flex-col items-center justify-center w-24 h-24 md:w-full rounded-2xl transition border"
-                                    style="background:#0a120e; color:#E7E7E7; border-color:#1a2e1f;"
-                                    onmouseover="if(!this.classList.contains('active')){this.style.background='#0f1a12'; this.style.borderColor='#00A849';}"
-                                    onmouseout="if(!this.classList.contains('active')){this.style.background='#0a120e'; this.style.borderColor='#1a2e1f';}"
+                                    class="category-btn flex flex-col items-center justify-center w-24 h-24 md:w-full rounded-2xl border"
                                     data-category="all">
                                     <span class="text-3xl mb-1">✨</span>
                                     <span class="text-xs font-medium text-center leading-tight">Todos</span>
@@ -783,13 +762,8 @@
     </footer>
 
     <script src="app.js"></script>
-    <script>
-        // Arrancar desde la sección de productos al cargar la página
-        window.addEventListener('load', () => {
-            const section = document.getElementById('lista-precios');
-            if (section) section.scrollIntoView({ behavior: 'instant' });
-        });
-    </script>
+
+
 
     <!-- ===== Image Lightbox ===== -->
     <div id="img-lightbox" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.92);

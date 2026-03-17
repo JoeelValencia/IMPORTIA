@@ -149,7 +149,7 @@ function openCart(product) {
   // Detener video previo
   cartVideo.pause();
 
-  if (product.video || product.img2 || product.img3 || product.img4 || product.img5 || product.img6) {
+  if (true) {  // Siempre usar modo carrusel (grande y centrado)
     // ---- Modo carrusel horizontal ----
     carouselSection.style.display = 'block';
     cartMediaBox.style.display = 'none';
@@ -206,24 +206,8 @@ function openCart(product) {
 
     // Fijar cart-img para compatibilidad con lightbox
     cartImg.src = encodeURI(product.img);
-
-  } else {
-    // ---- Modo thumbnail simple ----
-    carouselSection.style.display = 'none';
-    cartMediaBox.style.display = 'flex';
-
-    cartImg.style.display = 'block';
-    cartImg.src = encodeURI(product.img);
-    cartImg.alt = product.name;
-    cartImg.style.maxWidth = '76px';
-    cartImg.style.maxHeight = '76px';
-    cartImg.style.cursor = 'zoom-in';
-    cartImg.onclick = openImgZoom;
-    cartMediaBox.onclick = openImgZoom;
-
-    cartVideo.style.display = 'none';
-    if (cartImg2) cartImg2.style.display = 'none';
   }
+
   document.getElementById('cart-name').textContent = product.name;
   document.getElementById('cart-storage').textContent = product.storage;
   document.getElementById('cart-ars').textContent = '$ ' + priceARS.toLocaleString('es-AR');
@@ -252,20 +236,14 @@ function openCart(product) {
   const modal = document.getElementById('cart-modal');
   overlay.style.display = 'block';
 
-  const isMobile = window.innerWidth < 768;
-  if (isMobile) {
-    // Posicionar desde arriba, dejando solo 10px de margen
-    modal.style.top = '10px';
-    modal.style.transform = 'translateX(-50%) scale(0.92)';
-    modal.style.maxHeight = 'calc(100dvh - 20px)';
-    modal.style.borderRadius = '20px';
-  }
-
   requestAnimationFrame(() => {
     modal.style.opacity = '1';
-    modal.style.transform = isMobile
-      ? 'translateX(-50%) scale(1)'
-      : 'translate(-50%, -50%) scale(1)';
+    // Quitar el scale para abrir (top y left los maneja el HTML/CSS)
+    if (window.innerWidth < 768) {
+      modal.style.transform = 'translateX(-50%) scale(1)';
+    } else {
+      modal.style.transform = 'translate(-50%, -50%) scale(1)';
+    }
   });
 
   // Activar swipe táctil en el carrusel
@@ -280,19 +258,12 @@ function closeCart() {
   const overlay = document.getElementById('cart-overlay');
   const modal = document.getElementById('cart-modal');
   modal.style.opacity = '0';
-  const isMobile = window.innerWidth < 768;
-  modal.style.transform = isMobile
-    ? 'translateX(-50%) scale(0.92)'
-    : 'translate(-50%, -50%) scale(0.92)';
-  setTimeout(() => {
-    overlay.style.display = 'none';
-    // Reset posicion mobile al cerrar
-    if (isMobile) {
-      modal.style.top = '';
-      modal.style.maxHeight = '';
-      modal.style.borderRadius = '';
-    }
-  }, 220);
+  if (window.innerWidth < 768) {
+    modal.style.transform = 'translateX(-50%) scale(0.92)';
+  } else {
+    modal.style.transform = 'translate(-50%, -50%) scale(0.92)';
+  }
+  setTimeout(() => { overlay.style.display = 'none'; }, 220);
   document.body.style.overflow = '';
 }
 
