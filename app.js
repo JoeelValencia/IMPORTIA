@@ -1,15 +1,15 @@
-// Productos con precios reales del sitio
+// Productos con precios en ARS
 const products = [
   // iPhone 17
-  { name: 'iPhone 17 Pro Max', storage: '256GB', price: 1430, category: 'iphone', badge: 'Nuevo', img: 'https://www.importcaballito.com.ar/products/iphone-17-pro-max-256.png' },
-  { name: 'iPhone 17 Pro Max', storage: '512GB', price: 1690, category: 'iphone', badge: 'Nuevo', img: 'https://www.importcaballito.com.ar/products/iphone-17-pro-max-512.png' },
-  { name: 'iPhone 17 Pro Max', storage: '1TB', price: 1950, category: 'iphone', badge: 'Nuevo', img: 'https://www.importcaballito.com.ar/products/iphone-17-pro-max-1tb.png' },
+  { name: 'iPhone 17 Pro Max', storage: '256GB', price: 2059200, category: 'iphone', badge: 'Nuevo', img: 'https://www.importcaballito.com.ar/products/iphone-17-pro-max-256.png' },
+  { name: 'iPhone 17 Pro Max', storage: '512GB', price: 2433600, category: 'iphone', badge: 'Nuevo', img: 'https://www.importcaballito.com.ar/products/iphone-17-pro-max-512.png' },
+  { name: 'iPhone 17 Pro Max', storage: '1TB', price: 2808000, category: 'iphone', badge: 'Nuevo', img: 'https://www.importcaballito.com.ar/products/iphone-17-pro-max-1tb.png' },
 
   // Cables
-  { name: 'Cable iPhone', storage: 'USB a Lightning', price: 15, category: 'cables', badge: 'Nuevo', img: 'IMAGENES/CABLES/cable iphone usb a Ligtning/portada .png' },
-  { name: 'Cable iPhone', storage: 'Tipo C a Tipo C', price: 12, category: 'cables', badge: 'Nuevo', img: 'IMAGENES/CABLES/Cable iphone Tipo c a Tipo c/PORTADA.png', img2: 'IMAGENES/CABLES/Cable iphone Tipo c a Tipo c/1.png', img3: 'IMAGENES/CABLES/Cable iphone Tipo c a Tipo c/2.jpg' },
+  { name: 'Cable iPhone', storage: 'USB a Lightning', price: 5000, category: 'cables', badge: 'Nuevo', img: 'IMAGENES/CABLES/cable iphone usb a Ligtning/portada .png' },
+  { name: 'Cable iPhone', storage: 'Tipo C a Tipo C', price: 5000, category: 'cables', badge: 'Nuevo', img: 'IMAGENES/CABLES/Cable iphone Tipo c a Tipo c/PORTADA.png', img2: 'IMAGENES/CABLES/Cable iphone Tipo c a Tipo c/1.png', img3: 'IMAGENES/CABLES/Cable iphone Tipo c a Tipo c/2.jpg' },
   {
-    name: 'Cable iPhone', storage: 'Tipo C a Lightning', price: 10, category: 'cables', badge: 'Nuevo',
+    name: 'Cable iPhone', storage: 'Tipo C a Lightning', price: 5000, category: 'cables', badge: 'Nuevo',
     img: 'IMAGENES/CABLES/Cable iphone Tipo C a ligthning/1.0 PORTADA.png',
     img2: 'IMAGENES/CABLES/Cable iphone Tipo C a ligthning/3.2.png',
     img3: 'IMAGENES/CABLES/Cable iphone Tipo C a ligthning/5.3.png',
@@ -19,30 +19,30 @@ const products = [
 
   // Samsung
   {
-    name: 'Samsung Z Flip 7', storage: '256GB', price: 995, category: 'samsung', badge: 'Nuevo',
+    name: 'Samsung Z Flip 7', storage: '256GB', price: 1432800, category: 'samsung', badge: 'Nuevo',
     img: 'https://images.samsung.com/is/image/samsung/p6pim/us/feature/554628/us-galaxy-zflip7-f766-547880088',
     img2: 'https://images.samsung.com/is/image/samsung/p6pim/us/feature/554629/us-galaxy-zflip7-f766-547880089',
     img3: 'https://images.samsung.com/is/image/samsung/p6pim/us/feature/554630/us-galaxy-zflip7-f766-547880090'
   },
   {
-    name: 'Samsung Z Fold 7', storage: '256GB', price: 1695, category: 'samsung', badge: 'Nuevo',
+    name: 'Samsung Z Fold 7', storage: '256GB', price: 2440800, category: 'samsung', badge: 'Nuevo',
     img: 'https://images.samsung.com/is/image/samsung/p6pim/us/feature/554117/us-galaxy-z-fold7-f966-547879983',
     img2: 'https://images.samsung.com/is/image/samsung/p6pim/us/feature/554118/us-galaxy-z-fold7-f966-547879984',
     img3: 'https://images.samsung.com/is/image/samsung/p6pim/us/feature/554119/us-galaxy-z-fold7-f966-547879985'
   },
 
   // iPad
-  { name: 'iPad Pro M4', storage: '256GB', price: 950, category: 'ipad', badge: 'Nuevo', img: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-13-m4-finish-unselect-202405?wid=5120&hei=2880&fmt=jpeg&qlt=70' },
-  { name: 'iPad Pro M5', storage: '256GB', price: 1100, category: 'ipad', badge: 'Nuevo', img: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-13-m4-finish-unselect-202405?wid=5120&hei=2880&fmt=jpeg&qlt=70' },
+  { name: 'iPad Pro M4', storage: '256GB', price: 1368000, category: 'ipad', badge: 'Nuevo', img: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-13-m4-finish-unselect-202405?wid=5120&hei=2880&fmt=jpeg&qlt=70' },
+  { name: 'iPad Pro M5', storage: '256GB', price: 1584000, category: 'ipad', badge: 'Nuevo', img: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-13-m4-finish-unselect-202405?wid=5120&hei=2880&fmt=jpeg&qlt=70' },
 
   // Apple Watch
-  { name: 'Apple Watch SE 3', storage: '40mm', price: 280, category: 'watch', badge: 'Nuevo', img: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-se-2nd-gen-unselect-gallery-2-202309?wid=5120&hei=2880&fmt=jpeg&qlt=70' },
-  { name: 'Apple Watch Series 11', storage: '42mm', price: 450, category: 'watch', badge: 'Nuevo', img: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-s10-unselect-gallery-2-202409?wid=5120&hei=2880&fmt=jpeg&qlt=70' },
-  { name: 'Apple Watch Ultra 3', storage: '49mm', price: 950, category: 'watch', badge: 'Nuevo', img: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-ultra-2-unselect-gallery-2-202309?wid=5120&hei=2880&fmt=jpeg&qlt=70' },
+  { name: 'Apple Watch SE 3', storage: '40mm', price: 403200, category: 'watch', badge: 'Nuevo', img: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-se-2nd-gen-unselect-gallery-2-202309?wid=5120&hei=2880&fmt=jpeg&qlt=70' },
+  { name: 'Apple Watch Series 11', storage: '42mm', price: 648000, category: 'watch', badge: 'Nuevo', img: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-s10-unselect-gallery-2-202409?wid=5120&hei=2880&fmt=jpeg&qlt=70' },
+  { name: 'Apple Watch Ultra 3', storage: '49mm', price: 1368000, category: 'watch', badge: 'Nuevo', img: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-ultra-2-unselect-gallery-2-202309?wid=5120&hei=2880&fmt=jpeg&qlt=70' },
 
   // AirPods
   {
-    name: 'AirPods Pro 2da Gen', storage: 'USB-C', price: 250, category: 'airpods', badge: 'Nuevo',
+    name: 'AirPods Pro 2da Gen', storage: 'USB-C', price: 35000, category: 'airpods', badge: 'Nuevo',
     img: 'IMAGENES/AURICULARES/importia_full_res_1773547371138.png',
     img2: 'IMAGENES/AURICULARES/importia_full_res_1773584182730.png',
     img3: 'IMAGENES/AURICULARES/27f3b309-f9ab-4731-b8cf-9219441fc697.png',
@@ -53,7 +53,8 @@ const products = [
   },
 ];
 
-const DOLLAR_RATE = 1440;
+const DOLLAR_RATE = 1; // Precios ya en ARS
+
 
 function renderProducts(category = 'all') {
   const grid = document.getElementById('products-grid');
@@ -130,8 +131,7 @@ function openCart(product) {
   cartProduct = product;
   cartQty = 1;
 
-  const DOLLAR_RATE = 1440;
-  const priceARS = product.price * DOLLAR_RATE;
+  const priceARS = product.price * DOLLAR_RATE; // DOLLAR_RATE = 1, precios ya en ARS
   const priceTransfer = Math.round(priceARS * 1.03);
 
   // Populate modal fields
@@ -335,21 +335,14 @@ function changeQty(delta) {
 // ---- Update total based on qty × payment method + shipping ----
 function updateTotal() {
   if (!cartProduct) return;
-  const DR = 1440;
   const paymentEl = document.querySelector('input[name="payment"]:checked');
   const payment = paymentEl ? paymentEl.value : 'efectivo';
   const shipCost = parseFloat(document.getElementById('ship-cost')?.value) || 0;
-  let baseARS;
-  if (payment === 'usdt') {
-    const totalEl = document.getElementById('cart-total');
-    const totalUSD = (cartProduct.price * cartQty);
-    // For USDT show in USD + shipping in ARS separately if any
-    totalEl.textContent = 'US$ ' + totalUSD.toLocaleString('es-AR') + (shipCost > 0 ? ' + envío' : '');
-    return;
-  }
-  baseARS = cartProduct.price * DR * cartQty;
+  // Precios ya en ARS (DOLLAR_RATE = 1)
+  let baseARS = cartProduct.price * DOLLAR_RATE * cartQty;
   if (payment === 'transferencia') baseARS = Math.round(baseARS * 1.03);
   else if (payment === 'mercadopago') baseARS = Math.round(baseARS * 1.065);
+  // USDT: mostrar igual en ARS (o podés dividir por cotización si querés en USD)
   const totalARS = baseARS + shipCost;
   document.getElementById('cart-total').textContent = '$ ' + totalARS.toLocaleString('es-AR');
 }
