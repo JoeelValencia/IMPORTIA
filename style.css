@@ -1,0 +1,118 @@
+/* ============================================================
+   Lemon Nation Color Palette
+   --lemon-green:     #00F068  (Greent - primary accent)
+   --lemon-deep:      #00A849  (Evergreent - secondary green)
+   --lemon-black:     #000000  (Black - main background)
+   --lemon-dark:      #0a120e  (Dark green-black for cards)
+   --lemon-starlight: #E7E7E7  (Off-white - primary text)
+   --lemon-moon:      #5B5B5B  (Gray - muted text / borders)
+   --lemon-nebula:    #925DEE  (Purple - rare accent)
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #000000;
+    color: #E7E7E7;
+}
+
+/* ---- Category Buttons ---- */
+.category-btn.active {
+    background: #00F068;
+    color: #000000;
+    border-color: #00F068;
+    box-shadow: 0 0 20px rgba(0, 240, 104, 0.35);
+    transform: scale(1.05);
+}
+
+/* ---- FAQ Details ---- */
+details summary {
+    list-style: none;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] summary {
+    color: #00F068;
+}
+
+/* ---- Scrollbar (dark/lemon) ---- */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00A849;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00F068;
+}
+
+/* ---- Lemon Green Glow Utility ---- */
+.lemon-glow {
+    box-shadow: 0 0 24px rgba(0, 240, 104, 0.25);
+}
+
+/* ---- AirPods 360° Spin Animation ---- */
+@keyframes spin360 {
+    0% {
+        transform: perspective(400px) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(400px) rotateY(360deg);
+    }
+}
+
+.airpods-spin {
+    animation: spin360 4s linear infinite;
+    transform-style: preserve-3d;
+}
+
+.airpods-spin:hover {
+    animation-play-state: paused;
+    filter: drop-shadow(0 0 14px rgba(0, 240, 104, 0.45));
+}
+
+/* ---- Cart Modal: mobile positioning ---- */
+@media (max-width: 767px) {
+    #cart-modal {
+        top: 60px !important;
+        left: 50% !important;
+        transform: translateX(-50%) scale(0.92) !important;
+        max-height: calc(100dvh - 68px) !important;
+        border-top-left-radius: 20px !important;
+        border-top-right-radius: 20px !important;
+    }
+
+    /* Cuando el modal está abierto (sin escala) */
+    #cart-modal.cart-open {
+        transform: translateX(-50%) scale(1) !important;
+    }
+}
+
+/* ---- Carrusel: swipe táctil ---- */
+#cart-carousel-section {
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+}
